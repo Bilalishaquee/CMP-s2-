@@ -6,7 +6,7 @@ export function SearchSkeleton({ className }: { className?: string }) {
       <div className="h-10 w-2/3 rounded-lg bg-cmp-surface-strong" />
       <div className="grid gap-4 lg:grid-cols-3">
         {[1, 2, 3].map((i) => (
-          <div key={i} className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-sm">
+          <div key={i} className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-cmp-sm">
             <div className="h-4 w-1/3 rounded bg-cmp-surface-strong" />
             <div className="mt-4 h-6 w-2/3 rounded bg-cmp-surface-strong" />
             <div className="mt-3 space-y-2">

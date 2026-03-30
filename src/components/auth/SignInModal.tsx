@@ -55,14 +55,14 @@ export function SignInModal({
         role="dialog"
         aria-modal="true"
         aria-labelledby="auth-title"
-        className="relative w-full max-w-md overflow-hidden rounded-2xl border border-white/60 bg-cmp-bg-elevated shadow-[0_24px_80px_-12px_rgba(15,23,42,0.35)]"
+        className="relative w-full max-w-md overflow-hidden rounded-2xl border border-cmp-border bg-cmp-bg-elevated shadow-[var(--cmp-shadow-modal)]"
       >
         <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-cmp-accent/25 blur-3xl" />
         <div className="absolute -bottom-16 -left-16 h-36 w-36 rounded-full bg-cmp-violet/15 blur-3xl" />
         <div className="relative border-b border-cmp-border/50 bg-gradient-to-r from-cmp-surface-strong to-cmp-accent/10 px-6 py-5">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-teal-950 to-teal-800 text-white shadow-lg shadow-black/50">
+              <span className="cmp-auth-mark flex h-10 w-10 items-center justify-center rounded-xl text-white">
                 <Sparkles className="h-5 w-5" aria-hidden />
               </span>
               <div>
@@ -81,14 +81,14 @@ export function SignInModal({
               <X className="h-5 w-5" />
             </button>
           </div>
-          <div className="mt-4 flex rounded-lg bg-cmp-bg-elevated/70 p-1 shadow-inner ring-1 ring-cmp-border">
+          <div className="mt-4 flex rounded-lg bg-cmp-bg-elevated/70 p-1 shadow-cmp-inner ring-1 ring-cmp-border">
             <button
               type="button"
               onClick={() => onModeChange("signin")}
               className={cn(
                 "flex-1 rounded-md px-3 py-2 text-sm font-medium transition",
                 mode === "signin"
-                  ? "bg-cmp-bg-elevated text-cmp-text shadow-sm"
+                  ? "bg-cmp-bg-elevated text-cmp-text shadow-cmp-sm"
                   : "text-cmp-muted hover:text-cmp-text",
               )}
             >
@@ -100,7 +100,7 @@ export function SignInModal({
               className={cn(
                 "flex-1 rounded-md px-3 py-2 text-sm font-medium transition",
                 mode === "register"
-                  ? "bg-cmp-bg-elevated text-cmp-text shadow-sm"
+                  ? "bg-cmp-bg-elevated text-cmp-text shadow-cmp-sm"
                   : "text-cmp-muted hover:text-cmp-text",
               )}
             >
@@ -120,7 +120,7 @@ export function SignInModal({
               required
               autoComplete="email"
               placeholder="you@company.com"
-              className="w-full rounded-xl border border-cmp-border bg-cmp-surface-strong/80 px-4 py-2.5 text-sm text-cmp-text shadow-inner transition placeholder:text-cmp-muted focus:border-cmp-accent/50 focus:bg-cmp-bg-elevated focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
+              className="w-full rounded-xl border border-cmp-border bg-cmp-surface-strong/80 px-4 py-2.5 text-sm text-cmp-text shadow-cmp-inner transition placeholder:text-cmp-muted focus:border-cmp-accent/50 focus:bg-cmp-bg-elevated focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
             />
           </label>
           <label className="block">
@@ -133,7 +133,7 @@ export function SignInModal({
               required
               autoComplete={mode === "signin" ? "current-password" : "new-password"}
               placeholder="••••••••"
-              className="w-full rounded-xl border border-cmp-border bg-cmp-surface-strong/80 px-4 py-2.5 text-sm text-cmp-text shadow-inner transition placeholder:text-cmp-muted focus:border-cmp-accent/50 focus:bg-cmp-bg-elevated focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
+              className="w-full rounded-xl border border-cmp-border bg-cmp-surface-strong/80 px-4 py-2.5 text-sm text-cmp-text shadow-cmp-inner transition placeholder:text-cmp-muted focus:border-cmp-accent/50 focus:bg-cmp-bg-elevated focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
             />
           </label>
           {mode === "register" && (
@@ -142,7 +142,7 @@ export function SignInModal({
               <input
                 type="text"
                 placeholder="Organization name"
-                className="w-full rounded-xl border border-cmp-border bg-cmp-surface-strong/80 px-4 py-2.5 text-sm text-cmp-text shadow-inner transition focus:border-cmp-accent/50 focus:bg-cmp-bg-elevated focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
+                className="w-full rounded-xl border border-cmp-border bg-cmp-surface-strong/80 px-4 py-2.5 text-sm text-cmp-text shadow-cmp-inner transition focus:border-cmp-accent/50 focus:bg-cmp-bg-elevated focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
               />
             </label>
           )}

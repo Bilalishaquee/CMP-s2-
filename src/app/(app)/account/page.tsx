@@ -10,7 +10,7 @@ export default function AccountPage() {
       <p className="mt-2 text-sm text-cmp-muted">Lightweight profile area — authentication not implemented.</p>
 
       <div className="mt-8 grid gap-6 lg:grid-cols-2">
-        <section className="card-elevated rounded-2xl border border-cmp-border bg-cmp-bg-elevated/95 p-6 shadow-black/40">
+        <section className="card-elevated rounded-2xl border border-cmp-border bg-cmp-bg-elevated/95 p-6">
           <h2 className="text-sm font-semibold text-cmp-text">Profile</h2>
           <dl className="mt-4 space-y-2 text-sm">
             <div>
@@ -30,7 +30,7 @@ export default function AccountPage() {
 
         <section
           id="addresses"
-          className="card-elevated scroll-mt-28 rounded-2xl border border-cmp-border bg-cmp-bg-elevated/95 p-6 shadow-black/40"
+          className="card-elevated scroll-mt-28 rounded-2xl border border-cmp-border bg-cmp-bg-elevated/95 p-6"
         >
           <h2 className="text-sm font-semibold text-cmp-text">Saved addresses</h2>
           <p className="mt-2 text-sm text-cmp-muted">1200 Industrial Blvd, Austin, TX (default)</p>
@@ -45,7 +45,7 @@ export default function AccountPage() {
           </div>
         </section>
 
-        <section className="card-elevated rounded-2xl border border-cmp-border bg-cmp-bg-elevated/95 p-6 shadow-black/40 lg:col-span-2">
+        <section className="card-elevated rounded-2xl border border-cmp-border bg-cmp-bg-elevated/95 p-6 lg:col-span-2">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <h2 className="text-sm font-semibold text-cmp-text">Recent orders</h2>
             <Link href="/orders" className="text-sm font-semibold text-cmp-accent-dim hover:text-cmp-text">
@@ -66,14 +66,14 @@ export default function AccountPage() {
           <div className="mt-6 flex flex-wrap gap-2">
             <Link
               href="/orders"
-              className="inline-flex items-center justify-center rounded-xl border border-cmp-border bg-cmp-bg-elevated px-4 py-2 text-sm font-medium text-cmp-text shadow-sm shadow-black/40 transition hover:border-cmp-accent/30 hover:bg-cmp-accent/10 active:scale-[0.98]"
+              className="inline-flex items-center justify-center rounded-xl border border-cmp-border bg-cmp-bg-elevated px-4 py-2 text-sm font-medium text-cmp-text shadow-cmp-sm transition hover:border-cmp-accent/30 hover:bg-cmp-accent/10 active:scale-[0.98]"
             >
               Reorder from last PO (mock)
             </Link>
           </div>
         </section>
 
-        <section className="card-elevated rounded-2xl border border-cmp-border bg-cmp-bg-elevated/95 p-6 shadow-black/40 lg:col-span-2">
+        <section className="card-elevated rounded-2xl border border-cmp-border bg-cmp-bg-elevated/95 p-6 lg:col-span-2">
           <h2 className="text-sm font-semibold text-cmp-text">Preferred payment</h2>
           <p className="mt-2 text-sm text-cmp-muted">Net-30 terms placeholder · Card on file ending 4242 (mock)</p>
         </section>

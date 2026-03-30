@@ -23,7 +23,7 @@ function Inner() {
       </p>
       <p className="mt-4 font-mono text-lg font-semibold text-cmp-text">Order {orderId}</p>
 
-      <div className="mt-10 rounded-xl border border-cmp-border bg-cmp-bg-elevated p-6 text-left shadow-sm">
+      <div className="mt-10 rounded-xl border border-cmp-border bg-cmp-bg-elevated p-6 text-left shadow-cmp-sm">
         <h2 className="text-sm font-semibold text-cmp-text">Summary</h2>
         <dl className="mt-4 space-y-2 text-sm">
           <div className="flex justify-between">
@@ -41,7 +41,7 @@ function Inner() {
         </dl>
       </div>
 
-      <div className="mt-6 rounded-xl border border-cmp-accent/20 bg-gradient-to-r from-cmp-accent/12 to-cmp-bg-elevated px-4 py-3 text-sm text-cmp-text shadow-sm shadow-black/50">
+      <div className="mt-6 rounded-xl border border-cmp-accent/20 bg-gradient-to-r from-cmp-accent/12 to-cmp-bg-elevated px-4 py-3 text-sm text-cmp-text shadow-cmp-sm">
         Create an account to save addresses and reorder in one click.{" "}
         <button
           type="button"
@@ -55,13 +55,13 @@ function Inner() {
       <div className="mt-10 flex flex-wrap justify-center gap-3">
         <Link
           href="/search"
-          className="inline-flex items-center justify-center rounded-md bg-teal-950 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-teal-900"
+          className="inline-flex items-center justify-center rounded-md bg-cmp-accent-dim px-4 py-2 text-sm font-medium text-white shadow-cmp-sm transition hover:bg-cmp-accent"
         >
           Continue searching parts
         </Link>
         <Link
           href="/orders"
-          className="inline-flex items-center justify-center rounded-md border border-cmp-border bg-cmp-bg-elevated px-4 py-2 text-sm font-medium text-cmp-text shadow-sm transition hover:bg-cmp-surface-strong"
+          className="inline-flex items-center justify-center rounded-md border border-cmp-border bg-cmp-bg-elevated px-4 py-2 text-sm font-medium text-cmp-text shadow-cmp-sm transition hover:bg-cmp-surface-strong"
         >
           View orders
         </Link>

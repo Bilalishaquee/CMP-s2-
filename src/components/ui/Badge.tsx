@@ -11,10 +11,12 @@ export function Badge({
   tone?: "neutral" | "success" | "warning" | "brand";
 }) {
   const tones = {
-    neutral: "bg-cmp-surface-strong text-cmp-text border-cmp-border shadow-sm",
-    success: "bg-emerald-950/35 text-emerald-200 border-emerald-500/30 shadow-sm shadow-black/30",
-    warning: "bg-amber-950/35 text-amber-200 border-amber-500/30 shadow-sm",
-    brand: "bg-cmp-accent/10 text-cmp-text border-cmp-accent/35 shadow-sm shadow-black/50",
+    neutral: "bg-cmp-surface-strong text-cmp-text border-cmp-border shadow-cmp-sm",
+    success:
+      "border border-[color:var(--cmp-success-border)] bg-[var(--cmp-success-bg)] text-[var(--cmp-success-fg)] shadow-cmp-sm",
+    warning:
+      "border border-[color:var(--cmp-warn-border)] bg-[var(--cmp-warn-bg)] text-[var(--cmp-warn-fg)] shadow-cmp-sm",
+    brand: "bg-cmp-accent/10 text-cmp-text border-cmp-accent/35 shadow-cmp-sm",
   };
   return (
     <span

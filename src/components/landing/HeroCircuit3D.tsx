@@ -60,10 +60,10 @@ export function HeroCircuit3D({ className }: { className?: string }) {
             <div className="animate-cmp-orbit cmp-preserve-3d relative h-full w-full [transform:rotateX(54deg)_rotateZ(-18deg)]">
               {/* Substrate */}
               <div
-                className="absolute left-1/2 top-1/2 h-[78%] w-[92%] -translate-x-1/2 -translate-y-1/2 rounded-xl border border-cmp-border bg-gradient-to-br from-cmp-bg-elevated via-cmp-bg to-cmp-bg-elevated shadow-[0_24px_60px_-20px_rgb(0_0_0/0.75)]"
+                className="absolute left-1/2 top-1/2 h-[78%] w-[92%] -translate-x-1/2 -translate-y-1/2 rounded-xl border border-cmp-border bg-gradient-to-br from-cmp-bg-elevated via-cmp-bg to-cmp-bg-elevated shadow-[var(--cmp-hero-float-shadow)]"
                 style={{ transform: "translate(-50%, -50%) translateZ(-36px)" }}
               >
-                <div className="absolute inset-2 rounded-lg border border-cmp-accent/15 bg-[linear-gradient(90deg,transparent_0%,rgb(45_212_191/0.06)_50%,transparent_100%)] opacity-80" />
+                <div className="absolute inset-2 rounded-lg border border-cmp-accent/15 bg-[linear-gradient(90deg,transparent_0%,color-mix(in_srgb,var(--cmp-accent)_14%,transparent)_50%,transparent_100%)] opacity-80" />
                 <div className="absolute inset-x-4 bottom-3 top-3 rounded-md border border-dashed border-cmp-border/60 opacity-50" />
               </div>
               {/* Middle package */}
@@ -83,7 +83,7 @@ export function HeroCircuit3D({ className }: { className?: string }) {
               </div>
               {/* Top lid */}
               <div
-                className="absolute left-1/2 top-[26%] h-[22%] w-[58%] -translate-x-1/2 rounded-md border border-white/12 bg-gradient-to-b from-cmp-surface-strong to-cmp-surface shadow-lg"
+                className="absolute left-1/2 top-[26%] h-[22%] w-[58%] -translate-x-1/2 rounded-md border border-cmp-border/50 bg-gradient-to-b from-cmp-surface-strong to-cmp-surface shadow-cmp-lg"
                 style={{ transform: "translate(-50%, 0) translateZ(44px) rotateX(8deg)" }}
               >
                 <div className="absolute inset-x-4 top-1.5 h-px bg-gradient-to-r from-transparent via-cmp-accent/50 to-transparent" />
@@ -101,7 +101,7 @@ export function HeroCircuit3D({ className }: { className?: string }) {
             className="h-[88%] w-[88%] rounded-full border border-cmp-accent/10 opacity-70"
             style={{ animation: "cmp-orbit 22s linear infinite reverse" }}
           >
-            <span className="absolute left-1/2 top-0 block h-2 w-2 -translate-x-1/2 rounded-full bg-cmp-accent shadow-[0_0_14px_rgb(45_212_191/0.9)]" />
+            <span className="absolute left-1/2 top-0 block h-2 w-2 -translate-x-1/2 rounded-full bg-cmp-accent shadow-[var(--cmp-accent-dot-glow)]" />
           </div>
         </div>
       </div>

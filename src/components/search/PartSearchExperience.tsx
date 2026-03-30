@@ -70,9 +70,9 @@ export function PartSearchExperience({
       <form onSubmit={onSubmit} className="relative">
         <div
           className={cn(
-            "relative rounded-xl border bg-cmp-bg-elevated shadow-sm transition",
+            "relative rounded-xl border bg-cmp-bg-elevated shadow-cmp-sm transition",
             open ? "border-cmp-accent/45 ring-2 ring-cmp-accent/20" : "border-cmp-border",
-            large && "shadow-md",
+            large && "shadow-cmp-md",
           )}
         >
           <Search
@@ -109,7 +109,7 @@ export function PartSearchExperience({
 
         {showSuggest && (
           <ul
-            className="absolute z-20 mt-1 max-h-64 w-full overflow-auto rounded-lg border border-cmp-border bg-cmp-bg-elevated py-1 shadow-lg"
+            className="absolute z-20 mt-1 max-h-64 w-full overflow-auto rounded-lg border border-cmp-border bg-cmp-bg-elevated py-1 shadow-cmp-lg"
             role="listbox"
           >
             {suggestions.map((s) => (
@@ -133,7 +133,7 @@ export function PartSearchExperience({
       </form>
 
       <div className="mt-8 grid gap-6 lg:grid-cols-2">
-        <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-sm">
+        <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-cmp-sm">
           <div className="flex items-center gap-2 text-sm font-semibold text-cmp-text">
             <Clock className="h-4 w-4 text-cmp-muted" />
             Recent searches
@@ -156,7 +156,7 @@ export function PartSearchExperience({
             </ul>
           )}
         </div>
-        <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-sm">
+        <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-cmp-sm">
           <p className="text-sm font-semibold text-cmp-text">Popular sample parts</p>
           <div className="mt-3 flex flex-wrap gap-2">
             {SAMPLE_PART_CHIPS.map((p) => (

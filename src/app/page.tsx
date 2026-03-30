@@ -33,7 +33,7 @@ export default function HomePage() {
                 </p>
 
                 <div className="mx-auto mt-10 max-w-xl animate-fade-in [animation-delay:120ms] lg:mx-0">
-                  <div className="card-elevated rounded-2xl border border-cmp-border bg-cmp-bg-elevated/90 p-2 ring-1 ring-white/[0.06] backdrop-blur-md">
+                  <div className="card-elevated rounded-2xl border border-cmp-border bg-cmp-bg-elevated/90 p-2 ring-1 ring-[color:var(--cmp-ring-glass)] backdrop-blur-md">
                     <form
                       action="/search/results"
                       method="get"
@@ -42,12 +42,12 @@ export default function HomePage() {
                       <input
                         name="q"
                         placeholder="Enter part number (e.g. STM32F407VGT6)"
-                        className="w-full flex-1 rounded-xl border border-cmp-border bg-cmp-surface-strong/80 px-4 py-3.5 font-mono text-base text-cmp-text shadow-inner transition placeholder:text-cmp-muted focus:border-cmp-accent/50 focus:bg-cmp-bg-elevated focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
+                        className="w-full flex-1 rounded-xl border border-cmp-border bg-cmp-surface-strong/80 px-4 py-3.5 font-mono text-base text-cmp-text shadow-cmp-inner transition placeholder:text-cmp-muted focus:border-cmp-accent/50 focus:bg-cmp-bg-elevated focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
                         defaultValue="MT25QU512ABB"
                       />
                       <button
                         type="submit"
-                        className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-teal-500 to-teal-950 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-black/50 ring-1 ring-white/10 transition hover:from-teal-400 hover:to-teal-900 active:scale-[0.98] sm:px-6"
+                        className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-cmp-accent to-cmp-violet px-8 py-3.5 text-sm font-semibold text-white shadow-cmp-lg ring-1 ring-[color:var(--cmp-ring-on-primary)] transition hover:from-cmp-accent-dim hover:to-cmp-violet active:scale-[0.98] sm:px-6"
                       >
                         <Search className="h-4 w-4" />
                         Search
@@ -64,7 +64,7 @@ export default function HomePage() {
                     href="/search"
                     className={cn(
                       "inline-flex items-center justify-center gap-2 rounded-xl px-6 py-2.5 text-sm font-medium transition active:scale-[0.98]",
-                      "bg-gradient-to-b from-teal-500 to-teal-950 text-white shadow-lg shadow-black/50 ring-1 ring-white/10 hover:from-teal-400 hover:to-teal-900",
+                      "bg-gradient-to-b from-cmp-accent to-cmp-violet text-white shadow-cmp-lg ring-1 ring-[color:var(--cmp-ring-on-primary)] hover:from-cmp-accent-dim hover:to-cmp-violet",
                     )}
                   >
                     Search a Part
@@ -73,7 +73,7 @@ export default function HomePage() {
                   <Link
                     href="/bom"
                     className={cn(
-                      "inline-flex items-center justify-center gap-2 rounded-xl border border-cmp-border bg-cmp-bg-elevated px-6 py-2.5 text-sm font-medium text-cmp-text shadow-md shadow-black/40 transition hover:border-cmp-accent/35 hover:bg-cmp-accent/10 active:scale-[0.98]",
+                      "inline-flex items-center justify-center gap-2 rounded-xl border border-cmp-border bg-cmp-bg-elevated px-6 py-2.5 text-sm font-medium text-cmp-text shadow-cmp-md transition hover:border-cmp-accent/35 hover:bg-cmp-accent/10 active:scale-[0.98]",
                     )}
                   >
                     <Upload className="h-4 w-4" />
@@ -119,9 +119,9 @@ export default function HomePage() {
               ].map((f) => (
                 <div
                   key={f.title}
-                  className="group card-elevated rounded-2xl border border-cmp-border bg-cmp-bg-elevated/90 p-6 transition duration-300 hover:-translate-y-1 hover:border-cmp-accent/35 hover:shadow-xl hover:shadow-teal-950/30"
+                  className="group card-elevated rounded-2xl border border-cmp-border bg-cmp-bg-elevated/90 p-6 transition duration-300 hover:-translate-y-1 hover:border-cmp-accent/35 hover:shadow-[var(--cmp-shadow-hover-accent)]"
                 >
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cmp-surface-strong to-cmp-accent/10 text-cmp-accent shadow-inner ring-1 ring-cmp-border transition group-hover:from-cmp-accent/20 group-hover:to-cmp-accent/10 group-hover:text-cmp-text">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cmp-surface-strong to-cmp-accent/10 text-cmp-accent shadow-cmp-inner ring-1 ring-cmp-border transition group-hover:from-cmp-accent/20 group-hover:to-cmp-accent/10 group-hover:text-cmp-text">
                     <f.icon className="h-5 w-5" aria-hidden />
                   </span>
                   <h3 className="mt-4 font-semibold text-cmp-text">{f.title}</h3>
@@ -144,7 +144,7 @@ export default function HomePage() {
               ].map((t) => (
                 <li
                   key={t}
-                  className="flex gap-3 rounded-xl border border-cmp-border bg-gradient-to-br from-cmp-bg-elevated to-cmp-surface/80 px-4 py-4 text-sm text-cmp-text shadow-sm shadow-black/40 transition hover:border-cmp-accent/35"
+                  className="flex gap-3 rounded-xl border border-cmp-border bg-gradient-to-br from-cmp-bg-elevated to-cmp-surface/80 px-4 py-4 text-sm text-cmp-text shadow-cmp-sm transition hover:border-cmp-accent/35"
                 >
                   <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cmp-accent/10 text-cmp-accent ring-1 ring-cmp-accent/25">
                     <ClipboardList className="h-4 w-4" />

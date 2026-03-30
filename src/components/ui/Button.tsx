@@ -5,9 +5,9 @@ type Variant = "primary" | "secondary" | "ghost" | "outline";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-gradient-to-b from-teal-600 to-teal-950 text-white shadow-md shadow-black/50 ring-1 ring-white/10 hover:from-teal-500 hover:to-teal-900 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none disabled:active:scale-100",
+    "bg-gradient-to-b from-cmp-accent to-cmp-violet text-white shadow-cmp-md ring-1 ring-[color:var(--cmp-ring-on-primary)] hover:from-cmp-accent-dim hover:to-cmp-violet active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none disabled:active:scale-100",
   secondary:
-    "bg-cmp-bg-elevated text-cmp-text border border-cmp-border shadow-sm shadow-black/40 hover:border-cmp-border hover:bg-cmp-surface-strong/90 active:scale-[0.99] disabled:opacity-50",
+    "bg-cmp-bg-elevated text-cmp-text border border-cmp-border shadow-cmp-sm hover:border-cmp-border hover:bg-cmp-surface-strong/90 active:scale-[0.99] disabled:opacity-50",
   ghost:
     "text-cmp-text hover:bg-cmp-surface-strong active:scale-[0.99] disabled:opacity-50",
   outline:

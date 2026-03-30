@@ -117,7 +117,8 @@ export function ComparisonDrawer({
                           key={id}
                           className={cn(
                             "px-3 py-2.5",
-                            (hl || priceHl) && "bg-emerald-950/35 font-medium text-emerald-200",
+                            (hl || priceHl) &&
+                              "bg-[var(--cmp-success-bg)] font-medium text-[var(--cmp-success-fg)]",
                             zephyrHl && row.key === "Supplier" && "bg-cmp-accent/10 text-cmp-text",
                           )}
                         >

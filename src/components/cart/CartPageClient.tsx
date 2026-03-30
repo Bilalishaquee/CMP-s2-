@@ -16,7 +16,7 @@ export function CartPageClient() {
         <p className="mt-2 text-cmp-muted">Add parts from search or BOM results to build a mixed-supplier cart.</p>
         <Link
           href="/search"
-          className="mt-8 inline-flex items-center justify-center rounded-md bg-teal-950 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-teal-900"
+          className="mt-8 inline-flex items-center justify-center rounded-md bg-cmp-accent-dim px-4 py-2 text-sm font-medium text-white shadow-cmp-sm transition hover:bg-cmp-accent"
         >
           Continue searching parts
         </Link>
@@ -32,7 +32,7 @@ export function CartPageClient() {
       </p>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_360px]">
-        <div className="overflow-hidden rounded-xl border border-cmp-border bg-cmp-bg-elevated shadow-sm">
+        <div className="overflow-hidden rounded-xl border border-cmp-border bg-cmp-bg-elevated shadow-cmp-sm">
           <table className="w-full border-collapse text-sm">
             <thead className="border-b border-cmp-border bg-cmp-surface-strong text-left text-xs font-semibold uppercase tracking-wide text-cmp-muted">
               <tr>
@@ -104,7 +104,7 @@ export function CartPageClient() {
         </div>
 
         <aside className="space-y-4">
-          <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-5 shadow-sm">
+          <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-5 shadow-cmp-sm">
             <h2 className="text-sm font-semibold text-cmp-text">Order summary</h2>
             <dl className="mt-4 space-y-2 text-sm">
               <div className="flex justify-between">
@@ -125,7 +125,7 @@ export function CartPageClient() {
             </p>
             <Link
               href="/checkout"
-              className="mt-5 flex w-full items-center justify-center rounded-md bg-teal-950 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-teal-900"
+              className="mt-5 flex w-full items-center justify-center rounded-md bg-cmp-accent-dim px-4 py-2.5 text-sm font-medium text-white shadow-cmp-sm transition hover:bg-cmp-accent"
             >
               Proceed to checkout
             </Link>

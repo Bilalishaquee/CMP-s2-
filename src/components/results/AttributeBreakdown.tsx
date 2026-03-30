@@ -11,9 +11,11 @@ function StatusIcon({ status }: { status: MatchStatus }) {
 }
 
 function rowTone(status: MatchStatus) {
-  if (status === "match") return "bg-emerald-950/25 border-emerald-500/25";
-  if (status === "compatible") return "bg-amber-950/25 border-amber-500/25";
-  return "bg-rose-950/25 border-rose-500/25";
+  if (status === "match")
+    return "border border-[color:var(--cmp-success-border)] bg-[var(--cmp-success-bg-soft)] text-[var(--cmp-success-fg)]";
+  if (status === "compatible")
+    return "border border-[color:var(--cmp-compatible-border)] bg-[var(--cmp-compatible-bg)] text-[var(--cmp-compatible-fg)]";
+  return "border border-[color:var(--cmp-diff-border)] bg-[var(--cmp-diff-bg)] text-[var(--cmp-diff-fg)]";
 }
 
 export function AttributeBreakdown({
@@ -37,9 +39,9 @@ export function AttributeBreakdown({
             key={row.name}
             className={cn("grid grid-cols-[1fr_1fr_1fr_auto] gap-2 px-3 py-2.5 text-sm", rowTone(row.status))}
           >
-            <span className="font-medium text-cmp-text">{row.name}</span>
-            <span className="font-mono text-xs text-cmp-text">{row.searchedValue}</span>
-            <span className="font-mono text-xs text-cmp-text">{row.candidateValue}</span>
+            <span className="font-medium text-inherit">{row.name}</span>
+            <span className="font-mono text-xs text-inherit opacity-90">{row.searchedValue}</span>
+            <span className="font-mono text-xs text-inherit opacity-90">{row.candidateValue}</span>
             <div className="flex justify-end">
               <StatusIcon status={row.status} />
             </div>

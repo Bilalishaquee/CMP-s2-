@@ -24,7 +24,7 @@ export default function OrderDetailPage() {
               <div
                 className={`flex h-8 w-8 items-center justify-center rounded-full border-2 ${
                   step.done
-                    ? "border-emerald-500/60 bg-emerald-950/40 text-emerald-300"
+                    ? "border-[color:var(--cmp-success-border)] bg-[var(--cmp-success-bg-soft)] text-[var(--cmp-success-fg)]"
                     : "border-cmp-border bg-cmp-bg-elevated"
                 }`}
               >

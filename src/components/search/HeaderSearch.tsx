@@ -25,7 +25,7 @@ export function HeaderSearch() {
         value={q}
         onChange={(e) => setQ(e.target.value)}
         placeholder="Search by part number…"
-        className="w-full rounded-xl border border-cmp-border bg-cmp-bg-elevated/90 py-2.5 pl-10 pr-3 text-sm text-cmp-text shadow-inner shadow-black/40 placeholder:text-cmp-muted focus:border-cmp-accent/50 focus:bg-cmp-bg-elevated focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
+        className="w-full rounded-xl border border-cmp-border bg-cmp-bg-elevated/90 py-2.5 pl-10 pr-3 text-sm text-cmp-text shadow-cmp-inner placeholder:text-cmp-muted focus:border-cmp-accent/50 focus:bg-cmp-bg-elevated focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
         aria-label="Part number search"
       />
     </form>

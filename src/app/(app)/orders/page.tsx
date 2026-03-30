@@ -8,7 +8,7 @@ export default function OrdersPage() {
       <h1 className="text-3xl font-semibold tracking-tight text-cmp-text">Orders</h1>
       <p className="mt-2 text-sm text-cmp-muted">Prototype order history — no backend persistence.</p>
 
-      <div className="mt-8 overflow-x-auto rounded-xl border border-cmp-border bg-cmp-bg-elevated shadow-sm">
+      <div className="mt-8 overflow-x-auto rounded-xl border border-cmp-border bg-cmp-bg-elevated shadow-cmp-sm">
         <table className="min-w-[900px] w-full border-collapse text-left text-sm">
           <thead className="border-b border-cmp-border bg-cmp-surface-strong text-xs font-semibold uppercase tracking-wide text-cmp-muted">
             <tr>

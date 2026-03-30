@@ -88,14 +88,14 @@ export function BomUploadClient() {
           onDragOver={(e) => e.preventDefault()}
           onDrop={onDrop}
           className={cn(
-            "rounded-xl border-2 border-dashed border-cmp-border bg-cmp-bg-elevated p-10 text-center shadow-sm transition hover:border-cmp-muted",
+            "rounded-xl border-2 border-dashed border-cmp-border bg-cmp-bg-elevated p-10 text-center shadow-cmp-sm transition hover:border-cmp-muted",
             phase !== "idle" && phase !== "completed" && "pointer-events-none opacity-70",
           )}
         >
           <UploadCloud className="mx-auto h-10 w-10 text-cmp-muted" />
           <p className="mt-4 text-sm font-medium text-cmp-text">Drag and drop BOM file</p>
           <p className="mt-1 text-xs text-cmp-muted">CSV, XLSX · Max 5MB · Max 200 line items</p>
-          <label className="mt-6 inline-flex cursor-pointer items-center justify-center rounded-md bg-teal-950 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-teal-900">
+          <label className="mt-6 inline-flex cursor-pointer items-center justify-center rounded-md bg-cmp-accent-dim px-4 py-2 text-sm font-medium text-white shadow-cmp-sm hover:bg-cmp-accent">
             <input
               type="file"
               accept=".csv,.xlsx"
@@ -117,7 +117,7 @@ export function BomUploadClient() {
           </p>
         </div>
 
-        <aside className="space-y-4 rounded-xl border border-cmp-border bg-cmp-bg-elevated p-5 shadow-sm">
+        <aside className="space-y-4 rounded-xl border border-cmp-border bg-cmp-bg-elevated p-5 shadow-cmp-sm">
           <h2 className="text-sm font-semibold text-cmp-text">Requirements</h2>
           <ul className="space-y-2 text-sm text-cmp-muted">
             <li>• Required column: Part Number</li>
@@ -131,7 +131,7 @@ export function BomUploadClient() {
       </div>
 
       {fileName && (
-        <div className="mt-8 rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-sm">
+        <div className="mt-8 rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-cmp-sm">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="flex items-center gap-3">
               <FileSpreadsheet className="h-8 w-8 text-cmp-muted" />
@@ -151,7 +151,7 @@ export function BomUploadClient() {
           <div className="mt-4">
             <div className="h-2 overflow-hidden rounded-full bg-cmp-surface-strong">
               <div
-                className="h-full rounded-full bg-teal-950 transition-all duration-500"
+                className="h-full rounded-full bg-cmp-accent-dim transition-all duration-500"
                 style={{ width: `${progress}%` }}
               />
             </div>
@@ -181,7 +181,7 @@ export function BomUploadClient() {
           <p className="mt-1 text-sm text-cmp-muted">
             Line-level Options A/B/C mirror the search experience. Expand a row for technical cards.
           </p>
-          <div className="mt-4 overflow-x-auto rounded-xl border border-cmp-border bg-cmp-bg-elevated shadow-sm">
+          <div className="mt-4 overflow-x-auto rounded-xl border border-cmp-border bg-cmp-bg-elevated shadow-cmp-sm">
             <table className="min-w-[1100px] w-full border-collapse text-left text-sm">
               <thead className="border-b border-cmp-border bg-cmp-surface-strong text-xs font-semibold uppercase tracking-wide text-cmp-muted">
                 <tr>

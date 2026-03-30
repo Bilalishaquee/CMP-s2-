@@ -82,13 +82,13 @@ export function ResultsPageClient() {
         <div className="mt-6 flex justify-center gap-3">
           <Link
             href="/search"
-            className="inline-flex items-center justify-center rounded-md border border-cmp-border bg-cmp-bg-elevated px-4 py-2 text-sm font-medium text-cmp-text shadow-sm transition hover:bg-cmp-surface-strong"
+            className="inline-flex items-center justify-center rounded-md border border-cmp-border bg-cmp-bg-elevated px-4 py-2 text-sm font-medium text-cmp-text shadow-cmp-sm transition hover:bg-cmp-surface-strong"
           >
             Back to search
           </Link>
           <Link
             href="/bom"
-            className="inline-flex items-center justify-center rounded-md bg-teal-950 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-teal-900"
+            className="inline-flex items-center justify-center rounded-md bg-cmp-accent-dim px-4 py-2 text-sm font-medium text-white shadow-cmp-sm transition hover:bg-cmp-accent"
           >
             Upload BOM
           </Link>
@@ -136,7 +136,7 @@ export function ResultsPageClient() {
           className={cn(
             "mt-6 rounded-lg border px-4 py-3 text-sm",
             bundle.banner === "no_exact"
-              ? "border-amber-500/35 bg-amber-950/30 text-amber-100"
+              ? "border-[color:var(--cmp-warn-border)] bg-[var(--cmp-warn-bg)] text-[var(--cmp-warn-fg)]"
               : "border-cmp-border bg-cmp-bg-elevated text-cmp-text",
           )}
         >
@@ -167,7 +167,7 @@ export function ResultsPageClient() {
             className={cn(
               "rounded-full border px-3 py-1 text-xs font-medium",
               filter === k
-                ? "border-cmp-accent bg-teal-950 text-white"
+                ? "border-cmp-accent bg-cmp-accent-dim text-white"
                 : "border-cmp-border bg-cmp-bg-elevated text-cmp-text hover:border-cmp-border",
             )}
           >
@@ -201,7 +201,9 @@ export function ResultsPageClient() {
               }}
               className={cn(
                 "rounded-md px-2 py-1 text-xs font-medium",
-                scenario === k ? "bg-teal-950 text-white" : "bg-cmp-surface-strong text-cmp-text hover:bg-cmp-surface-strong",
+                scenario === k
+                  ? "bg-cmp-accent-dim text-white"
+                  : "bg-cmp-surface-strong text-cmp-text hover:bg-cmp-surface-strong",
               )}
             >
               {label}
@@ -224,7 +226,7 @@ export function ResultsPageClient() {
         </div>
 
         <aside className="space-y-4 lg:sticky lg:top-24 lg:self-start">
-          <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-sm">
+          <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-cmp-sm">
             <h2 className="text-sm font-semibold text-cmp-text">Comparison summary</h2>
             <p className="mt-1 text-xs text-cmp-muted">
               Sticky panel for executive review. Lowest price and Zephyr preferred option are highlighted in the
@@ -251,7 +253,7 @@ export function ResultsPageClient() {
             </Button>
           </div>
 
-          <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-sm">
+          <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-cmp-sm">
             <div className="flex items-center justify-between gap-2">
               <h2 className="text-sm font-semibold text-cmp-text">Cart snapshot</h2>
               <ShoppingCart className="h-4 w-4 text-cmp-muted" />
@@ -268,7 +270,7 @@ export function ResultsPageClient() {
             </Link>
           </div>
 
-          <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-sm">
+          <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-cmp-sm">
             <h2 className="text-sm font-semibold text-cmp-text">Saved searches (mock)</h2>
             <ul className="mt-2 space-y-1 text-sm text-cmp-accent-dim">
               <li>
@@ -284,7 +286,7 @@ export function ResultsPageClient() {
             </ul>
           </div>
 
-          <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-sm">
+          <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-4 shadow-cmp-sm">
             <h2 className="text-sm font-semibold text-cmp-text">Recently viewed (mock)</h2>
             <div className="mt-2 flex flex-wrap gap-2">
               {["LM358DR", "ATMEGA328P-AU"].map((p) => (

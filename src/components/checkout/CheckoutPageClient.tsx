@@ -36,7 +36,7 @@ export function CheckoutPageClient() {
         <p className="mt-2 text-cmp-muted">Add items to your cart first.</p>
         <Link
           href="/search"
-          className="mt-8 inline-flex items-center justify-center rounded-md bg-teal-950 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-teal-900"
+          className="mt-8 inline-flex items-center justify-center rounded-md bg-cmp-accent-dim px-4 py-2 text-sm font-medium text-white shadow-cmp-sm transition hover:bg-cmp-accent"
         >
           Search parts
         </Link>
@@ -57,8 +57,8 @@ export function CheckoutPageClient() {
       </div>
 
       {priceChanged && (
-        <div className="mt-4 flex items-start gap-3 rounded-lg border border-amber-500/35 bg-amber-950/30 px-4 py-3 text-sm text-amber-100">
-          <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-400" />
+        <div className="mt-4 flex items-start gap-3 rounded-lg border border-[color:var(--cmp-warn-border)] bg-[var(--cmp-warn-bg)] px-4 py-3 text-sm text-[var(--cmp-warn-fg)]">
+          <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-[color:var(--cmp-warn-link)]" />
           <div>
             <p className="font-semibold">Stock / price changed since cart</p>
             <p className="mt-1">
@@ -66,7 +66,7 @@ export function CheckoutPageClient() {
             </p>
             <button
               type="button"
-              className="mt-2 text-sm font-medium text-amber-300 underline"
+              className="mt-2 text-sm font-medium text-[color:var(--cmp-warn-link)] underline"
               onClick={() => setPriceChanged(false)}
             >
               Accept updates
@@ -77,7 +77,7 @@ export function CheckoutPageClient() {
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_380px]">
         <div className="space-y-8">
-          <section className="card-elevated rounded-2xl border border-cmp-border bg-cmp-bg-elevated/95 p-6 shadow-black/40">
+          <section className="card-elevated rounded-2xl border border-cmp-border bg-cmp-bg-elevated/95 p-6">
             <h2 className="text-sm font-semibold text-cmp-text">Account</h2>
             <p className="mt-1 text-sm text-cmp-muted">
               Optional:{" "}
@@ -103,9 +103,9 @@ export function CheckoutPageClient() {
             </label>
           </section>
 
-          <section className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-6 shadow-sm">
+          <section className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-6 shadow-cmp-sm">
             <h2 className="text-sm font-semibold text-cmp-text">Shipping address</h2>
-            <p className="mt-1 flex items-center gap-2 text-xs text-amber-800">
+            <p className="mt-1 flex items-center gap-2 text-xs text-cmp-muted">
               <Truck className="h-4 w-4" />
               Shipping available to US, Canada, and Mexico only.
             </p>
@@ -137,7 +137,7 @@ export function CheckoutPageClient() {
             </div>
           </section>
 
-          <section className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-6 shadow-sm">
+          <section className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-6 shadow-cmp-sm">
             <h2 className="text-sm font-semibold text-cmp-text">Shipping method</h2>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
               <button
@@ -145,7 +145,7 @@ export function CheckoutPageClient() {
                 onClick={() => setMethod("ground")}
                 className={`rounded-lg border p-4 text-left text-sm transition ${
                   method === "ground"
-                    ? "border-cmp-accent ring-2 ring-white/10"
+                    ? "border-cmp-accent ring-2 ring-[color:var(--cmp-ring-glass)]"
                     : "border-cmp-border hover:border-cmp-border"
                 }`}
               >
@@ -158,7 +158,7 @@ export function CheckoutPageClient() {
                 onClick={() => setMethod("expedited")}
                 className={`rounded-lg border p-4 text-left text-sm transition ${
                   method === "expedited"
-                    ? "border-cmp-accent ring-2 ring-white/10"
+                    ? "border-cmp-accent ring-2 ring-[color:var(--cmp-ring-glass)]"
                     : "border-cmp-border hover:border-cmp-border"
                 }`}
               >
@@ -169,7 +169,7 @@ export function CheckoutPageClient() {
             </div>
           </section>
 
-          <section className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-6 shadow-sm">
+          <section className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-6 shadow-cmp-sm">
             <h2 className="text-sm font-semibold text-cmp-text">Payment</h2>
             <div className="mt-4 flex flex-wrap gap-2">
               <button
@@ -197,21 +197,21 @@ export function CheckoutPageClient() {
                 <label className="text-xs font-medium text-cmp-muted sm:col-span-2">
                   Card number
                   <input
-                    className="mt-1 w-full rounded-xl border border-cmp-border px-3 py-2 font-mono text-sm shadow-inner focus:border-cmp-accent/50 focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
+                    className="mt-1 w-full rounded-xl border border-cmp-border px-3 py-2 font-mono text-sm shadow-cmp-inner focus:border-cmp-accent/50 focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
                     placeholder="4242 4242 4242 4242"
                   />
                 </label>
                 <label className="text-xs font-medium text-cmp-muted">
                   Expiry
                   <input
-                    className="mt-1 w-full rounded-xl border border-cmp-border px-3 py-2 text-sm shadow-inner focus:border-cmp-accent/50 focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
+                    className="mt-1 w-full rounded-xl border border-cmp-border px-3 py-2 text-sm shadow-cmp-inner focus:border-cmp-accent/50 focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
                     placeholder="MM/YY"
                   />
                 </label>
                 <label className="text-xs font-medium text-cmp-muted">
                   CVC
                   <input
-                    className="mt-1 w-full rounded-xl border border-cmp-border px-3 py-2 text-sm shadow-inner focus:border-cmp-accent/50 focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
+                    className="mt-1 w-full rounded-xl border border-cmp-border px-3 py-2 text-sm shadow-cmp-inner focus:border-cmp-accent/50 focus:outline-none focus:ring-2 focus:ring-cmp-accent/30"
                     placeholder="123"
                   />
                 </label>
@@ -234,7 +234,7 @@ export function CheckoutPageClient() {
         </div>
 
         <aside className="space-y-4 lg:sticky lg:top-24 lg:self-start">
-          <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-5 shadow-sm">
+          <div className="rounded-xl border border-cmp-border bg-cmp-bg-elevated p-5 shadow-cmp-sm">
             <h2 className="text-sm font-semibold text-cmp-text">Order summary</h2>
             <ul className="mt-4 max-h-48 space-y-2 overflow-auto text-sm text-cmp-text">
               {lines.map((l) => (
@@ -260,8 +260,8 @@ export function CheckoutPageClient() {
                 <dd className="font-mono">${total.toFixed(2)}</dd>
               </div>
             </dl>
-            <div className="mt-4 flex items-start gap-2 rounded-lg border border-emerald-500/25 bg-emerald-950/30 px-3 py-2 text-xs text-emerald-200">
-              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+            <div className="mt-4 flex items-start gap-2 rounded-lg border border-[color:var(--cmp-success-border)] bg-[var(--cmp-success-bg)] px-3 py-2 text-xs text-[var(--cmp-success-fg)]">
+              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-cmp-accent" />
               Indicative totals shown. Final charges confirmed on submit.
             </div>
             <Button className="mt-5 w-full" onClick={placeOrder}>

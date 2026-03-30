@@ -29,10 +29,10 @@ export function ResultOptionCard({
   return (
     <article
       className={cn(
-        "card-elevated flex flex-col rounded-2xl border bg-cmp-bg-elevated/95 backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-xl",
+        "card-elevated flex flex-col rounded-2xl border bg-cmp-bg-elevated/95 backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-cmp-xl",
         emphasizePreferred
-          ? "border-cmp-accent/40 ring-2 ring-cmp-accent/25 shadow-teal-950/40"
-          : "border-cmp-border shadow-black/40",
+          ? "border-cmp-accent/40 ring-2 ring-cmp-accent/25 shadow-[var(--cmp-shadow-card-selected)]"
+          : "border-cmp-border shadow-cmp-sm",
         isC && emphasizePreferred && "border-l-[5px] border-l-cmp-accent bg-gradient-to-b from-cmp-bg-elevated to-cmp-accent/10",
       )}
     >
