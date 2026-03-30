@@ -1,0 +1,48 @@
+import type { BomLine } from "@/types";
+
+export const MOCK_BOM_LINES: BomLine[] = [
+  {
+    line: 1,
+    partNumber: "STM32F407VGT6",
+    qty: 24,
+    refDes: "U1",
+    optionA: "STM32F407VGT6",
+    optionB: "GD32F407VGT6",
+    optionC: "STM32F407VGT6TR",
+    bestScore: 99,
+    status: "Ready",
+  },
+  {
+    line: 2,
+    partNumber: "TPS5430DDAR",
+    qty: 8,
+    refDes: "U2",
+    optionA: "TPS5430DDAR",
+    optionB: "XL1509-5.0E1",
+    optionC: "TPS5430DDAR",
+    bestScore: 100,
+    status: "Ready",
+  },
+  {
+    line: 3,
+    partNumber: "LM358DR",
+    qty: 40,
+    refDes: "U3–U12",
+    optionA: "LM358DR",
+    optionB: "LM358DR",
+    optionC: "LM358DR2G",
+    bestScore: 97,
+    status: "Review",
+  },
+  {
+    line: 4,
+    partNumber: "SN74LVC245APWR",
+    qty: 16,
+    refDes: "U13",
+    optionA: "SN74LVC245APWR",
+    optionB: "74LVC245APW,118",
+    optionC: "SN74LVC245APWR",
+    bestScore: 100,
+    status: "Ready",
+  },
+];

@@ -1,26 +1,157 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #060912;
+  --foreground: #e8eef7;
+  --brand: #0d9488;
+  --brand-mid: #2dd4bf;
+  --surface: rgba(255, 255, 255, 0.045);
+  --cmp-bg: #060912;
+  --cmp-bg-elevated: #0c111c;
+  --cmp-surface: rgb(255 255 255 / 0.05);
+  --cmp-surface-strong: rgb(255 255 255 / 0.09);
+  --cmp-border: rgb(148 163 184 / 0.14);
+  --cmp-border-glow: rgb(45 212 191 / 0.22);
+  --cmp-text: #e8eef7;
+  --cmp-muted: #8a9bb8;
+  --cmp-accent: #2dd4bf;
+  --cmp-accent-dim: #14b8a6;
+  --cmp-violet: #a78bfa;
+  --cmp-heat: #fb923c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --color-cmp-bg: #060912;
+  --color-cmp-bg-elevated: #0c111c;
+  --color-cmp-surface: rgb(255 255 255 / 0.05);
+  --color-cmp-surface-strong: rgb(255 255 255 / 0.09);
+  --color-cmp-border: rgb(148 163 184 / 0.14);
+  --color-cmp-text: #e8eef7;
+  --color-cmp-muted: #8a9bb8;
+  --color-cmp-accent: #2dd4bf;
+  --color-cmp-accent-dim: #14b8a6;
+  --color-cmp-violet: #a78bfa;
+  --color-cmp-heat: #fb923c;
+  --color-cmp-border-glow: rgb(45 212 191 / 0.22);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cmp-bg);
+  color: var(--cmp-text);
+}
+
+::selection {
+  background: rgb(45 212 191 / 0.28);
+  color: #f8fafc;
+}
+
+/* Deep lab mesh — cool teal + violet wash */
+.mesh-page {
+  background-color: var(--cmp-bg);
+  background-image:
+    radial-gradient(ellipse 90% 55% at 50% -25%, rgb(45 212 191 / 0.09), transparent 55%),
+    radial-gradient(ellipse 45% 40% at 100% 10%, rgb(167 139 250 / 0.07), transparent 50%),
+    radial-gradient(ellipse 50% 45% at 0% 30%, rgb(20 184 166 / 0.06), transparent 55%),
+    linear-gradient(180deg, rgb(12 17 28 / 0.4) 0%, transparent 35%);
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgb(148 163 184 / 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(148 163 184 / 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.card-elevated {
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 0.35),
+    0 12px 40px -16px rgb(0 0 0 / 0.55),
+    inset 0 1px 0 rgb(255 255 255 / 0.04);
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.45s ease-out both;
+}
+
+@keyframes cmp-float {
+  0%,
+  100% {
+    transform: translateY(0) rotateX(8deg) rotateY(-12deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateX(10deg) rotateY(8deg);
+  }
+}
+
+@keyframes cmp-orbit {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes cmp-trace-dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-cmp-float {
+  animation: cmp-float 7s ease-in-out infinite;
+}
+
+.animate-cmp-orbit {
+  animation: cmp-orbit 28s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.cmp-perspective {
+  perspective: 1200px;
+  perspective-origin: 50% 40%;
+}
+
+.cmp-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.cmp-hero-trace {
+  stroke-dasharray: 420;
+  stroke-dashoffset: 420;
+  animation: cmp-trace-dash 2.8s ease-out forwards;
+}
+
+.cmp-hero-trace-delay {
+  animation-delay: 0.6s;
+}
+
+.cmp-glow-accent {
+  box-shadow:
+    0 0 60px -12px rgb(45 212 191 / 0.35),
+    0 0 100px -30px rgb(167 139 250 / 0.2);
 }
