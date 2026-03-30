@@ -25,7 +25,7 @@ export function AppHeader({ showSearch = true }: { showSearch?: boolean }) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-cmp-border bg-cmp-bg-elevated/85 shadow-[var(--cmp-shadow-header)] backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center gap-6 px-4 lg:px-8">
+      <div className="mx-auto flex min-h-16 max-w-7xl items-center gap-2 px-3 py-2 sm:gap-3 sm:px-4 md:gap-6 lg:px-8">
         <Link
           href="/"
           className="group flex shrink-0 items-center gap-2.5 font-semibold tracking-tight text-cmp-text"
@@ -54,7 +54,7 @@ export function AppHeader({ showSearch = true }: { showSearch?: boolean }) {
             );
           })}
         </nav>
-        <div className="ml-auto flex min-w-0 flex-1 items-center justify-end gap-2 sm:gap-3">
+        <div className="ml-auto flex min-w-0 flex-1 items-center justify-end gap-1.5 sm:gap-2 md:gap-3">
           {showSearch && (
             <div className="hidden min-w-0 max-w-md flex-1 lg:block">
               <HeaderSearch />
@@ -76,9 +76,9 @@ export function AppHeader({ showSearch = true }: { showSearch?: boolean }) {
           <button
             type="button"
             onClick={() => openAuth("signin")}
-            className="rounded-xl border border-cmp-border bg-cmp-bg-elevated/90 px-3 py-2 text-sm font-medium text-cmp-text shadow-cmp-sm transition hover:border-cmp-accent/30 hover:bg-cmp-accent/10 hover:text-cmp-text active:scale-[0.98]"
+            className="rounded-xl border border-cmp-border bg-cmp-bg-elevated/90 px-2.5 py-2 text-sm font-medium text-cmp-text shadow-cmp-sm transition hover:border-cmp-accent/30 hover:bg-cmp-accent/10 hover:text-cmp-text active:scale-[0.98] sm:px-3"
           >
-            <span className="hidden sm:inline">Guest / </span>Sign In
+            <span className="hidden md:inline">Guest / </span>Sign In
           </button>
         </div>
       </div>

@@ -2,7 +2,6 @@
 
 import { ComparisonDrawer } from "@/components/results/ComparisonDrawer";
 import { ResultOptionCard } from "@/components/results/ResultOptionCard";
-import { SeoPreview } from "@/components/results/SeoPreview";
 import { SearchSkeleton } from "@/components/search/SearchSkeleton";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -99,8 +98,6 @@ export function ResultsPageClient() {
       </div>
     );
   }
-
-  const primary = bundle.optionA ?? bundle.optionB ?? bundle.optionC!;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 lg:px-8">
@@ -297,10 +294,6 @@ export function ResultsPageClient() {
             </div>
           </div>
         </aside>
-      </div>
-
-      <div className="mt-10">
-        <SeoPreview query={q || primary.partNumber} primary={primary} />
       </div>
 
       <ComparisonDrawer

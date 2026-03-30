@@ -181,8 +181,8 @@ export function BomUploadClient() {
           <p className="mt-1 text-sm text-cmp-muted">
             Line-level Options A/B/C mirror the search experience. Expand a row for technical cards.
           </p>
-          <div className="mt-4 overflow-x-auto rounded-xl border border-cmp-border bg-cmp-bg-elevated shadow-cmp-sm">
-            <table className="min-w-[1100px] w-full border-collapse text-left text-sm">
+          <div className="cmp-table-scroll mt-4 rounded-xl border border-cmp-border bg-cmp-bg-elevated shadow-cmp-sm">
+            <table className="cmp-responsive-table min-w-[1100px] text-left text-sm">
               <thead className="border-b border-cmp-border bg-cmp-surface-strong text-xs font-semibold uppercase tracking-wide text-cmp-muted">
                 <tr>
                   <th className="px-3 py-3">Line</th>

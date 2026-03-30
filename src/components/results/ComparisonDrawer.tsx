@@ -67,7 +67,7 @@ export function ComparisonDrawer({
         aria-modal="true"
         aria-labelledby="comparison-title"
       >
-        <div className="flex items-center justify-between border-b border-cmp-border px-6 py-4">
+        <div className="flex items-center justify-between border-b border-cmp-border px-4 py-3 sm:px-6 sm:py-4">
           <div>
             <h2 id="comparison-title" className="text-lg font-semibold text-cmp-text">
               Side-by-side comparison
@@ -80,14 +80,14 @@ export function ComparisonDrawer({
             <X className="h-5 w-5" />
           </Button>
         </div>
-        <div className="flex-1 overflow-auto px-6 py-4">
+        <div className="flex-1 overflow-auto px-3 py-3 sm:px-6 sm:py-4">
           <div className="mb-4 flex flex-wrap gap-2">
             {lowestPriceId && <Badge tone="success">Lowest indicative price highlighted</Badge>}
             {exactMatchId && <Badge tone="brand">Exact match highlighted</Badge>}
             {zephyrId && <Badge tone="brand">Zephyr preferred option</Badge>}
           </div>
-          <div className="overflow-x-auto rounded-lg border border-cmp-border">
-            <table className="w-full min-w-[720px] border-collapse text-sm">
+          <div className="cmp-table-scroll rounded-lg border border-cmp-border">
+            <table className="cmp-responsive-table min-w-[720px] text-sm">
               <thead>
                 <tr className="border-b border-cmp-border bg-cmp-surface-strong">
                   <th className="px-3 py-2 text-left text-xs font-semibold uppercase tracking-wide text-cmp-muted">
