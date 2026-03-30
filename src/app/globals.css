@@ -324,3 +324,45 @@ body {
   background-image: linear-gradient(to bottom right, #0f766e, #14b8a6);
   box-shadow: var(--cmp-shadow-md), 0 0 0 1px var(--cmp-ring-brand);
 }
+
+/* Responsive helpers */
+.cmp-table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cmp-responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .cmp-page-title {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .cmp-table-scroll {
+    margin-inline: -0.5rem;
+    padding-inline: 0.5rem;
+  }
+
+  .cmp-responsive-table {
+    min-width: 680px;
+    font-size: 0.8125rem;
+  }
+
+  .cmp-responsive-table th,
+  .cmp-responsive-table td {
+    padding: 0.625rem 0.5rem;
+    vertical-align: top;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cmp-responsive-table {
+    min-width: 760px;
+  }
+}

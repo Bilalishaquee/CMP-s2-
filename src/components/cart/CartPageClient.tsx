@@ -26,14 +26,14 @@ export function CartPageClient() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8">
-      <h1 className="text-3xl font-semibold tracking-tight text-cmp-text">Cart</h1>
+      <h1 className="cmp-page-title text-3xl font-semibold tracking-tight text-cmp-text">Cart</h1>
       <p className="mt-2 text-sm text-cmp-muted">
         Mixed suppliers (Option A/B/C). Live pricing and stock are confirmed at checkout.
       </p>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_360px]">
-        <div className="overflow-hidden rounded-xl border border-cmp-border bg-cmp-bg-elevated shadow-cmp-sm">
-          <table className="w-full border-collapse text-sm">
+        <div className="cmp-table-scroll overflow-hidden rounded-xl border border-cmp-border bg-cmp-bg-elevated shadow-cmp-sm">
+          <table className="cmp-responsive-table min-w-[860px] text-sm">
             <thead className="border-b border-cmp-border bg-cmp-surface-strong text-left text-xs font-semibold uppercase tracking-wide text-cmp-muted">
               <tr>
                 <th className="px-4 py-3">Part</th>
